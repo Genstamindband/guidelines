@@ -13,7 +13,8 @@ sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
 # Setup firewall
 ```
 sudo ufw allow 22  
-sudo ufw allow 26656  
+sudo ufw allow 26656
+sudo ufw enable
 ```
 # Config enviornment
 vi ~/.bash_profile
