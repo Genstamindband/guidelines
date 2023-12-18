@@ -1,7 +1,8 @@
 **This is a guideline for Namada pre-genesis validator node**  
     
 _Server requirement is 4vCPU, 16GB, 1TB SSD_   
-_Current Vesion is testnet-15, CHAIN_ID="public-testnet-15.0dacadb8d663"_   
+_Current Vesion is testnet-15, CHAIN_ID="public-testnet-15.0dacadb8d663"_  
+_root user 'namadanet' has been created in advanced_  
 
 # Install Pre-requisites software
 ```
