@@ -39,7 +39,7 @@ make build-release
 
 cd $HOME && sudo cp "$HOME/namada/target/release/namada" /usr/local/bin/namada && sudo cp "$HOME/namada/target/release/namadac" /usr/local/bin/namadac && sudo cp "$HOME/namada/target/release/namadan" /usr/local/bin/namadan && sudo cp "$HOME/namada/target/release/namadaw" /usr/local/bin/namadaw
 ```
-Copy cometbft
+Install consensus cometbft
 ```
 wget https://github.com/cometbft/cometbft/releases/download/v0.37.2/cometbft_0.37.2_linux_amd64.tar.gz
 tar -xvf cometbft_0.37.2_linux_amd64.tar.gz
