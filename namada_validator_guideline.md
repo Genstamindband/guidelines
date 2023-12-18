@@ -56,7 +56,10 @@ Namada v0.28.1
 ```
 
 # Copy pre-genesis folder to $BASE_DIR
-```sudo cp -r ~/pre-genesis $BASE_DIR```
+```
+mkdir -p $BASE_DIR
+sudo cp -r ~/pre-genesis $BASE_DIR
+```
 
 # Join network
 ```
