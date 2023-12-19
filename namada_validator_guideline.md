@@ -109,4 +109,19 @@ sudo journalctl -u namadad -n 1000 -f | grep "height"
 ```
 # MISC
 Derive pre-genesis key from mnemonic words  
-`namadaw --pre-genesis key derive --alias <your_moniker>`
+`namadaw --pre-genesis key derive --alias <your_moniker>`  
+
+Check bonded-stake  
+`namadac bonded-stake | grep <account_address>`  
+
+Check balances/bonds  
+```
+namadac balance --owner $VALIDATOR_ALIAS --token NAM
+namadac bonds --owner $VALIDATOR_ALIAS
+```
+
+Check key/address list
+```
+namadaw key list
+namadaw address list
+```
