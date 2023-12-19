@@ -107,3 +107,6 @@ sudo service namadad stop
 sudo service namadad restart  
 sudo journalctl -u namadad -n 1000 -f | grep "height"  
 ```
+# MISC
+Derive pre-genesis key from mnemonic words  
+`namadaw --pre-genesis key derive --alias <your_moniker>`
