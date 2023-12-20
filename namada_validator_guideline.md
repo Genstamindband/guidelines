@@ -97,7 +97,7 @@ sudo systemctl start namadad && sudo journalctl -u namadad -n 1000 -f
 ```
 curl -s localhost:26657/status | jq .  
 namadac find-validator --tm-address=$(curl -s localhost:26657/status | jq -r .result.validator_info.address)  
-namadac validator-state --validator $VALIDATOR_ALIAS
+namadac validator-state --validator <validator address>
 ```
 # Service operations
 ```
