@@ -22,7 +22,7 @@ vi ~/.bash_profile
 ```
 export PATH=$HOME/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:$HOME/go/bin  
 export BASE_DIR=$HOME/.local/share/namada  
-export NAMADA_TAG=v0.28.1  
+export NAMADA_TAG=v0.28.2    
 export TM_HASH=v0.1.4-abciplus  
 export CHAIN_ID="public-testnet-15.0dacadb8d663"  
 export PUBLIC_IP="<PUBLIC IP>"  
@@ -52,7 +52,7 @@ Verify version
 cometbft version
 0.37.2
 namada --version
-Namada v0.28.1
+Namada v0.28.2
 ```
 
 # Copy pre-genesis folder to $BASE_DIR
