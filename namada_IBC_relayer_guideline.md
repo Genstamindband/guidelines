@@ -136,12 +136,12 @@ Found address Established: tnam1q98ulmx4gu5dws5msjy8jsw3358j7k2gsv0267tl
 ```
 
 ## Configure hermes
-export HERMES_DIR="$HOME/.hermes"
-export HERMES_CONFIG="$HERMES_DIR/config.toml"
-export WALLET_PATH_A="$BASE_DIR_A/$CHAIN_ID_A/wallet.toml"
-export WALLET_PATH_B="$BASE_DIR_B/$CHAIN_ID_B/wallet.toml"
+export HERMES_DIR="$HOME/.hermes"  
+export HERMES_CONFIG="$HERMES_DIR/config.toml"  
+export WALLET_PATH_A="$BASE_DIR_A/$CHAIN_ID_A/wallet.toml"  
+export WALLET_PATH_B="$BASE_DIR_B/$CHAIN_ID_B/wallet.toml"  
 
-mkdir $HERMES_DIR && cd $HERMES_DIR
+mkdir $HERMES_DIR && cd $HERMES_DIR  
 ```
 sudo tee $HERMES_CONFIG > /dev/null <<EOF
 [global]
@@ -205,8 +205,8 @@ ls $HERMES_DIR/keys/$CHAIN_ID_A/keyring-test/relayer.json
 ls $HERMES_DIR/keys/$CHAIN_ID_B/keyring-test/relayer.json
 ```
 ## Fund faucet NAM to relayer accounts
-Testnet-15: https://faucet.heliax.click/ (tnam1qr5cl4ptvkeugtpjv27gynetdkap4yxu5cgeynjs)
-Campfire: https://faucet.luminara.icu/   (tnam1qp7x23umthcpg556e33z9tkdv400qnga5yw2ytet)
+Testnet-15: https://faucet.heliax.click/ (tnam1qr5cl4ptvkeugtpjv27gynetdkap4yxu5cgeynjs)  
+Campfire: https://faucet.luminara.icu/   (tnam1qp7x23umthcpg556e33z9tkdv400qnga5yw2ytet)  
 
 ## Create IBC channel
 ```
@@ -275,30 +275,28 @@ SUCCESS Channel {
 ```
 
 ## Start hermes service
-systemctl --user start hermesd
-journalctl --user-unit=hermesd.service -f
+systemctl --user start hermesd  
+journalctl --user-unit=hermesd.service -f  
 
 ## IBC-tranfer
-Generate "Tom" on testnet-15:
-namadaw key gen --alias "Tom"
-Retrieve "Tom" address:
-namadaw address find --alias "Tom"
+Generate "Tom" on testnet-15:  
+namadaw key gen --alias "Tom"  
+Retrieve "Tom" address:  
+namadaw address find --alias "Tom"  
 ```
 Found address Implicit: tnam1qzxcxg94ynyxlxzaz888ptwcwdrkxwkxt572xq4n
 ```
-
-Generate "Jonny" on campfire:
-$HOME/campfire/bin/namadaw --base-dir $BASE_DIR_B key gen --alias "Jonny"
-
-Retrieve "Jonny" address:
-$HOME/campfire/bin/namadaw --chain-id $CHAIN_ID_B --base-dir $BASE_DIR_B address find --alias "Jonny"
+Generate "Jonny" on campfire:  
+$HOME/campfire/bin/namadaw --base-dir $BASE_DIR_B key gen --alias "Jonny"  
+Retrieve "Jonny" address:  
+$HOME/campfire/bin/namadaw --chain-id $CHAIN_ID_B --base-dir $BASE_DIR_B address find --alias "Jonny"  
 ```
 Found address Implicit: tnam1qqg6xcx03zfh04k360alwlejzwha3xmucg4kcddr
 ```
 
-Fund 10 btc faucet to Tom
-Fund 100 nam faucet to Tom
-Check balance before sending
+Fund 10 btc faucet to Tom  
+Fund 100 nam faucet to Tom  
+Check balance before sending  
 ```
 namadac balance --owner "Tom"
 btc: 10
