@@ -332,10 +332,10 @@ transfer/channel-8/btc: 1
 
 ## MISC
 Update client:  
-`hermes update client --host-chain $CHAIN_ID --client $CLIENT_ID`
+`hermes update client --host-chain $CHAIN_ID --client $CLIENT_ID`  
 Check status of testnet-15:  
 `curl -s localhost:26657/status | jq .`
-Check status of campfire: 
+Check status of campfire:  
 `curl -s localhost:36657/status | jq .`
 
 
