@@ -107,33 +107,23 @@ ExecStart=/usr/local/bin/hermes --config /home/namadanet/.hermes/config.toml sta
 WantedBy=default.target
 EOF
 ```
-sudo chmod 755 /usr/lib/systemd/user/hermesd.service
-systemctl --user daemon-reload
-systemctl --user enable hermesd
+sudo chmod 755 /usr/lib/systemd/user/hermesd.service  
+systemctl --user daemon-reload  
+systemctl --user enable hermesd  
 
 ## Create relayer accounts
-Create relayer account on testnet-15:
-namadaw key gen --alias "relayer" --unsafe-dont-encrypt
-```
-minimum rubber holiday purity ivory trash target since brand layer great search river kit bread bike animal until card reason kind expand among joy
-Successfully added a key and an address with alias: "relayer"
-```
-namadaw address find --alias "relayer"
+Create relayer account on testnet-15:  
+namadaw key gen --alias "relayer" --unsafe-dont-encrypt  
+namadaw address find --alias "relayer"  
 ```
 Found address Implicit: tnam1qr5cl4ptvkeugtpjv27gynetdkap4yxu5cgeynjs
 ```
-
-Create relayer account on campfire:
-$HOME/campfire/bin/namadaw --base-dir $BASE_DIR_B key gen --alias "relayer" --unsafe-dont-encrypt
-```
-enhance basket invite forget bubble walk fiscal umbrella dust warfare burden cupboard word become olympic antique dwarf broom toward casino hill gravity vanish gym
-Successfully added a key and an address with alias: "relayer"
-```
+Create relayer account on campfire:  
+$HOME/campfire/bin/namadaw --base-dir $BASE_DIR_B key gen --alias "relayer" --unsafe-dont-encrypt  
 $HOME/campfire/bin/namadaw --chain-id $CHAIN_ID_B --base-dir $BASE_DIR_B address find --alias "relayer"
 ```
 Found address Implicit: tnam1qp7x23umthcpg556e33z9tkdv400qnga5yw2ytet
 ```
-
 Check NAM address on testnet-15:
 namadaw address find --alias "nam"
 ```
