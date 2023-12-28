@@ -1,4 +1,4 @@
-IBC relayer guideline between testnet and campfire
+***IBC relayer guideline between testnet and campfire***
 
 # Deploy testnet-15
 Refer to https://github.com/aquariusluo/guidelines/blob/main/namada_validator_guideline.md
@@ -16,7 +16,7 @@ export BASE_DIR_B="$HOME/.local/share/campfire"
 
 ## Create campfire service
 mkdir -p $HOME/campfire/bin && cd $HOME/campfire/bin 
-tar -zxvf namada-v0.28.1-Linux-x86_64.tar.gz --strip-components=1 && rm namada-v0.28.1-Linux-x86_64.tar.gz
+tar -zxvf namada-v0.28.1-Linux-x86_64.tar.gz --strip-components=1 && rm namada-v0.28.1-Linux-x86_64.tar.gz  
 ```
 sudo tee /usr/lib/systemd/user/campfired.service > /dev/null <<EOF
 [Unit]
@@ -40,10 +40,10 @@ ExecStart=%h/campfire/bin/namada --chain-id=luminara.857cf638d323bbae2ed94 --bas
 WantedBy=default.target
 EOF
 ```
-sudo chmod 755 /usr/lib/systemd/user/campfired.service
-sudo loginctl enable-linger namadanet
-systemctl --user daemon-reload
-systemctl --user enable campfired
+sudo chmod 755 /usr/lib/systemd/user/campfired.service  
+sudo loginctl enable-linger namadanet  
+systemctl --user daemon-reload  
+systemctl --user enable campfired  
 
 ## Configure campfire
 export NAMADA_NETWORK_CONFIGS_SERVER=https://testnet.luminara.icu/configs
