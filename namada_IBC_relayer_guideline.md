@@ -13,9 +13,8 @@ export BASE_DIR=$HOME/.local/share/namada
 export BASE_DIR_A=$BASE_DIR  
 export BASE_DIR_B="$HOME/.local/share/campfire"  
 
-
 ## Create campfire service
-mkdir -p $HOME/campfire/bin && cd $HOME/campfire/bin 
+mkdir -p $HOME/campfire/bin && cd $HOME/campfire/bin  
 tar -zxvf namada-v0.28.1-Linux-x86_64.tar.gz --strip-components=1 && rm namada-v0.28.1-Linux-x86_64.tar.gz  
 ```
 sudo tee /usr/lib/systemd/user/campfired.service > /dev/null <<EOF
@@ -46,18 +45,18 @@ systemctl --user daemon-reload
 systemctl --user enable campfired  
 
 ## Configure campfire
-export NAMADA_NETWORK_CONFIGS_SERVER=https://testnet.luminara.icu/configs
-cd $HOME/campfire/bin
-mkdir -p ${BASE_DIR_B}/${CHAIN_ID_B}/wasm/
-cp $BASE_DIR/global-config.toml $BASE_DIR/global-config.toml.bak
-./namada client utils join-network --chain-id $CHAIN_ID_B --dont-prefetch-wasm
-mv $BASE_DIR/global-config.toml $BASE_DIR_B/ && mv $BASE_DIR/$CHAIN_ID_B $BASE_DIR_B/
-mv $BASE_DIR/global-config.toml.bak $BASE_DIR/global-config.toml
-sudo chmod -R 777 $BASE_DIR_B
+export NAMADA_NETWORK_CONFIGS_SERVER=https://testnet.luminara.icu/configs  
+cd $HOME/campfire/bin  
+mkdir -p ${BASE_DIR_B}/${CHAIN_ID_B}/wasm/  
+cp $BASE_DIR/global-config.toml $BASE_DIR/global-config.toml.bak  
+./namada client utils join-network --chain-id $CHAIN_ID_B --dont-prefetch-wasm  
+mv $BASE_DIR/global-config.toml $BASE_DIR_B/ && mv $BASE_DIR/$CHAIN_ID_B $BASE_DIR_B/  
+mv $BASE_DIR/global-config.toml.bak $BASE_DIR/global-config.toml  
+sudo chmod -R 777 $BASE_DIR_B  
 
-wget -c https://testnet.luminara.icu/wasm.tar.gz
-tar -zxvf wasm.tar.gz
-mv wasm/* ${BASE_DIR_B}/${CHAIN_ID_B}/wasm/ && rm wasm.tar.gz && rm -rf wasm
+wget -c https://testnet.luminara.icu/wasm.tar.gz  
+tar -zxvf wasm.tar.gz  
+mv wasm/* ${BASE_DIR_B}/${CHAIN_ID_B}/wasm/ && rm wasm.tar.gz && rm -rf wasm  
 
 ### Find and/or add at least one persistent peer in config.toml:
 ```
@@ -76,19 +75,18 @@ sudo ufw allow 36656
 systemctl --user start campfired
 
 ## Check node status
-journalctl --user-unit=campfired.service -f
+journalctl --user-unit=campfired.service -f  
 curl -s localhost:36657/status | jq .
-
 
 # Setup IBC relayer via hermes
 
 ## Build hermes via source code
-export TAG="3f28e54beb21a071250f165579524ab2b734418b" 
-cd $HOME && git clone https://github.com/heliaxdev/hermes.git && cd hermes && git checkout $TAG
-cargo build --release --bin hermes
-target/release/hermes --version
--> hermes 1.7.3+3f28e54b
-sudo cp target/release/hermes /usr/local/bin/
+export TAG="3f28e54beb21a071250f165579524ab2b734418b"  
+cd $HOME && git clone https://github.com/heliaxdev/hermes.git && cd hermes && git checkout $TAG  
+cargo build --release --bin hermes  
+target/release/hermes --version  
+-> hermes 1.7.3+3f28e54b  
+sudo cp target/release/hermes /usr/local/bin/  
 
 ## Create hermes service
 ```
