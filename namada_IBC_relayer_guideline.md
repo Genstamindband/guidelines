@@ -101,7 +101,7 @@ StartLimitBurst=3
 Type=simple
 Restart=always
 RestartSec=30
-ExecStart=/usr/local/bin/hermes --config /home/namadanet/.hermes/config.toml start 
+ExecStart=/usr/local/bin/hermes --config %h/.hermes/config.toml start 
 
 [Install]
 WantedBy=default.target
