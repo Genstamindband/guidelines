@@ -15,6 +15,7 @@ export BASE_DIR_B="$HOME/.local/share/campfire"
 
 ## Create campfire service
 mkdir -p $HOME/campfire/bin && cd $HOME/campfire/bin  
+wget -c https://github.com/anoma/namada/releases/download/v0.28.1/namada-v0.28.1-Linux-x86_64.tar.gz  
 tar -zxvf namada-v0.28.1-Linux-x86_64.tar.gz --strip-components=1 && rm namada-v0.28.1-Linux-x86_64.tar.gz  
 ```
 sudo tee /usr/lib/systemd/user/campfired.service > /dev/null <<EOF
