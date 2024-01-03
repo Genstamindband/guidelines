@@ -1,3 +1,6 @@
+**Assuming you‘ve installed namada validator node. Be familiar with namada config and prometheus/grafana setup.**
+
+![image](https://github.com/aquariusluo/images/blob/master/namada_grafana.png)  
 # Modifiy Namada config.toml 
 vi $BASE_DIR/$CHAIN_ID/config.toml
 ```
