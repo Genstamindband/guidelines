@@ -1,4 +1,4 @@
-# Modifiy config.toml 
+# Modifiy Namada config.toml 
 vi $BASE_DIR/$CHAIN_ID/config.toml
 ```
 prometheus = true
