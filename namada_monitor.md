@@ -1,4 +1,5 @@
-**Assuming you‘ve installed namada validator node. Be familiar with namada config and prometheus/grafana setup.**
+**Assuming you‘ve installed namada validator node. Be familiar with namada config and prometheus/grafana setup.**   
+_Thanks for King Sirouk, refer to https://hackmd.io/@x8TnZOIJTLCGlasbXxkcMQ/HyvKv-3hn_
 
 ![image](https://github.com/aquariusluo/images/blob/master/namada_grafana.png)  
 # Modifiy Namada config.toml 
