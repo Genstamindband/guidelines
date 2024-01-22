@@ -41,7 +41,7 @@ WantedBy=default.target
 EOF
 ```
 sudo chmod 755 /usr/lib/systemd/user/campfired.service  
-sudo loginctl enable-linger namadanet  
+sudo loginctl enable-linger campfired  
 systemctl --user daemon-reload  
 systemctl --user enable campfired  
 
