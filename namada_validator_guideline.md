@@ -68,6 +68,15 @@ sudo cp -r ~/pre-genesis $BASE_DIR
 ```
 cd $HOME && namadac utils join-network --chain-id $CHAIN_ID --genesis-validator $VALIDATOR_ALIAS
 ```
+# Modify $BASE_DIR/$CHAIN_ID/config.toml
+[ledger.cometbft.rpc]
+laddr = "tcp://0.0.0.0:26657"
+[ledger.cometbft.instrumentation]
+prometheus = true
+prometheus_listen_addr = ":26660"
+[ledger.cometbft]
+moniker = "<your-moniker-name>"
+
 # Create and launch service
 sudo vi /etc/systemd/system/namadad.service
 ```
