@@ -34,7 +34,7 @@ Restart=always
 RestartSec=30
 LimitNOFILE=65535
 LimitSTACK=infinity
-ExecStart=%h/campfire/bin/namada --chain-id=luminara.857cf638d323bbae2ed94 --base-dir=$HOME/.local/share/campfire node ledger run
+ExecStart=%h/campfire/bin/namada --chain-id=luminara.857cf638d323bbae2ed94 --base-dir=%h/.local/share/campfire node ledger run
 
 [Install]
 WantedBy=default.target
