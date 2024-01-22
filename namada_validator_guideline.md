@@ -15,6 +15,9 @@ sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
 ```
 sudo ufw allow 22  
 sudo ufw allow 26656
+sudo ufw allow 26657  (RPC)
+sudo ufw allow 26660  (for namada metic)
+sudo ufw allow 9100   (for node-exporter)
 sudo ufw enable
 ```
 # Config enviornment
