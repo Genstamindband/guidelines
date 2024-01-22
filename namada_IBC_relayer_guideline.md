@@ -69,7 +69,7 @@ sed -n '/persistent_peers/s/^persistent_peers = "\(.*\)"/\1/p' $BASE_DIR_B/$CHAI
 ```
 sed -i 's|proxy_app = "tcp://127.0.0.1:26658"|proxy_app = "tcp://127.0.0.1:36658"|; s|laddr = "tcp://127.0.0.1:26657"|laddr = "tcp://127.0.0.1:36657"|; s|laddr = "tcp://0.0.0.0:26656"|laddr = "tcp://0.0.0.0:36656"|' $BASE_DIR_B/$CHAIN_ID_B/config.toml
 ```
-## Add fireall rule
+## Add firewall rule
 sudo ufw allow 36656
 
 ## Start campfire service
