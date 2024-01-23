@@ -142,3 +142,7 @@ Bacup/restore
 ```
 config.toml, wallet.toml, priv_validator_key.json, node_key.json
 ```
+Snapshot
+```
+wget https://files.cryptosj.net/files/namadatestnet/namadatestnet.tar.gz
+```
