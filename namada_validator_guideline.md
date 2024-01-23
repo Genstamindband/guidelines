@@ -138,7 +138,7 @@ Check key/address list
 namadaw key list
 namadaw address list
 ```
-Bacup/restore
+Backup/restore
 ```
 config.toml, wallet.toml, priv_validator_key.json, node_key.json
 ```
