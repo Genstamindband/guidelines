@@ -146,3 +146,5 @@ Snapshot
 ```
 wget https://files.cryptosj.net/files/namadatestnet/namadatestnet.tar.gz
 ```
+# Monitor tools
+TG bot: https://t.me/NamTool_Bot from https://namtool.denodes.xyz/
