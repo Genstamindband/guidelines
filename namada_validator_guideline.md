@@ -38,6 +38,7 @@ source ~/.bash_profile
 # Build from source code
 Build namada and copy to /usr/local/bin
 ```
+rm -rf $HOME/namada
 cd $HOME && git clone https://github.com/anoma/namada && cd namada && git checkout $NAMADA_TAG
 make build-release
 
